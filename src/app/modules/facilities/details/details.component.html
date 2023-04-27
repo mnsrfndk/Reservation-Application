@@ -1,0 +1,23 @@
+<div class="container facility-name">
+  <h2>{{facility.name}}</h2>
+</div>
+<div class="container main">
+  <div class="left-side">
+    <img src="{{'https://'+facility.imageUrl}}" [ngStyle]="{'max-width': '100%', 'border-radius': '5px'}"
+      alt="facility image">
+  </div>
+  <div class="right-side" [ngStyle]="{'padding': '0 20px'}">
+    <h1>{{facility.description}}</h1>
+    <ul>
+      <li *ngFor="let instrument of facility.instruments">
+        <h3>{{instrument.name}}</h3>
+      </li>
+    </ul>
+    <div class="flex-container">
+      <span class="me-4 text-secondary">{{facility.isAvailable ? "Available" : "Not Available"}}</span>
+      <button class="btn btn-primary" (click)="toggleAvailability()">{{
+        facility.isAvailable ? "Reserve" : "Cancel Reservation"
+        }}</button>
+    </div>
+  </div>
+</div>

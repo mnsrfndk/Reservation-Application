@@ -1,0 +1,9 @@
+<p style="margin-top: 100px;">list works!</p>
+<div *ngFor="let facility of facilities">
+    <ng-container *ngFor="let instrument of facility.instruments">
+        <div>
+            <p>{{instrument.name}}</p>
+            <p>{{instrument.id}}</p>
+        </div>
+    </ng-container>
+</div>

@@ -1,0 +1,49 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <a class="top-text" [ngStyle]="{'cursor': 'pointer'}"
+        onclick="document.getElementById('facilities').scrollIntoView()">
+        <div class="arrow"></div>
+        <div class="text-center text-uppercase" [ngStyle]="{'font-weight': '600', 'font-size': '16px'}">
+          Facilities</div>
+        <div class="arrow"></div>
+      </a>
+
+
+
+
+      
+
+<!-- 
+      <input class="form-control" list="datalistOptions" placeholder="Type to search..." (change)="showFacilities()" [(ngModel)]="searchText">
+      <datalist id="datalistOptions">
+        <option [value]="facility.name" *ngFor="let facility of facilities">
+      </datalist> -->
+
+    </div>
+    <div id="facilities"></div>
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <div class="card-group">
+
+          <ng-container *ngFor="let facility of facilities">
+            <a class="mx-auto" [routerLink]="['/facilities/details', facility.id]">
+              <div class="card m-3 mx-auto" [ngClass]="{'disabled': !facility.isAvailable}">
+                <img class="card-img-top" style="border-radius: 5px;" [src]="'https://'+facility.imageUrl"
+                  alt="Facility image">
+                <div class="card-body">
+                  <h3 class="card-title">{{ facility.name }}</h3>
+                  <p class="card-text">{{ facility.description }}</p>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item" *ngFor="let instrument of facility.instruments">
+                      {{ instrument.name }}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>

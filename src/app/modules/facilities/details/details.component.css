@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+}
+
+.facility-name {
+    margin-top: 90px;
+}
+
+.flex-container {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-side {
+    flex-basis: 50%;
+}
+
+.right-side {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (max-width: 1000px) {
+    .main {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 70px;
+    }
+
+    .flex-container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .right-side {
+        margin-top: 20px;
+    }
+
+    .facility-name {
+        display: none;
+    }
+}

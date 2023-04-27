@@ -1,0 +1,55 @@
+.toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  color: black;
+  font-weight: 600;
+  padding: 0 30px;
+  z-index: 100;
+  border-bottom: none;
+  transition: border-bottom 0.3s ease;
+}
+
+.toolbar.scrolled {
+  border-bottom: 7px solid #153f51;
+}
+.toolbar img {
+  margin: 0 16px;
+}
+
+.toolbar #twitter-logo {
+  height: 40px;
+  margin: 0 8px;
+}
+
+.toolbar #youtube-logo {
+  height: 40px;
+  margin: 0 16px;
+}
+
+.toolbar #twitter-logo:hover,
+.toolbar #youtube-logo:hover {
+  opacity: 0.8;
+}
+
+.spacer {
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .toolbar {
+    height: 50px;
+    padding-left: 0;
+    justify-content: space-between;
+  }
+
+  .toolbar.scrolled {
+    border-bottom: 2px solid #153f51 !important;
+  }
+
+}

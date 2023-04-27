@@ -1,0 +1,14 @@
+<div class="toolbar" role="banner" [class.scrolled]="scrolledDown">
+  <a href="/facilities/list">
+    <img width="140" alt="Company Logo" src="../assets/darkblue-logo-resized.png" />
+  </a>
+  <div class="spacer"></div>
+  <mat-form-field [ngStyle]="{'height': '60px', 'padding': '0'}" class="search">
+    <input matInput [ngStyle]="{}" placeholder="Type to search..." name="searchText" [(ngModel)]="inputValue" (input)="sendData()"
+  [matAutocomplete]="auto">
+
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let facility of facilities" [value]="facility.name" (onSelectionChange)="routeToDetails(facility.id)">{{facility.name}}</mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</div>
