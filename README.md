@@ -2,7 +2,7 @@
 <img src="./src/assets/app.gif" />
 
 ## Description
-This is a reservation app built using Angular, Bootstrap, and .NET. It uses an Azure SQL database to store facility and product information. Swagger is used to post data to the backend. Users can reserve facilities by clicking a button that updates the database accordingly.
+This is a reservation app built using Angular, Bootstrap, and .NET. It uses an Azure SQL database to store facility and instrument information. Swagger is used to post data to the backend. Users can reserve facilities by clicking a button that updates the database accordingly.
 
 ## Installation and Setup
 To run this app, follow these steps:
